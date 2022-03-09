@@ -11,3 +11,9 @@ executables = ["hello"]
 epoll = "~0.1.0"  # Added by alr
 [[pins]]  # Added by alr
 epoll = { path='../../epoll-ada' }   # Added by alr
+
+[gpr-set-externals]
+EPOLL_COMPILE_CHECKS = "enabled"
+EPOLL_STYLE_CHECKS = "enabled"
+EPOLL_RUNTIME_CHECKS = "enabled"
+EPOLL_BUILD_MODE = "debug"
