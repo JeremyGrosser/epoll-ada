@@ -3,6 +3,8 @@
 --
 --  SPDX-License-Identifier: BSD-3-Clause
 --
+with System;
+
 package body Epoll is
 
    function epoll_create1

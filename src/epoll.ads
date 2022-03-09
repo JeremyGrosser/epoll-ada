@@ -6,7 +6,6 @@
 with Interfaces.C; use Interfaces.C;
 with Interfaces;   use Interfaces;
 with GNAT.Sockets; use GNAT.Sockets;
-with System;
 
 package Epoll is
 
