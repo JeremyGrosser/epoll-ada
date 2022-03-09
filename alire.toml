@@ -1,0 +1,7 @@
+name = "epoll"
+description = "Linux epoll binding"
+version = "0.1.0"
+
+authors = ["Jeremy Grosser"]
+maintainers = ["Jeremy Grosser <jeremy@synack.me>"]
+maintainers-logins = ["JeremyGrosser"]

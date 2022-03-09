@@ -1,0 +1,13 @@
+name = "hello"
+description = "Shiny new project"
+version = "0.0.0"
+
+authors = ["Jeremy Grosser"]
+maintainers = ["Jeremy Grosser <jeremy@synack.me>"]
+maintainers-logins = ["JeremyGrosser"]
+
+executables = ["hello"]
+[[depends-on]]  # Added by alr
+epoll = "~0.1.0"  # Added by alr
+[[pins]]  # Added by alr
+epoll = { path='../../epoll-ada' }   # Added by alr
