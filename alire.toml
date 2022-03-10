@@ -1,6 +1,6 @@
 name = "epoll"
 description = "Linux epoll binding"
-version = "0.1.0"
+version = "0.1.1"
 licenses = "BSD-3-Clause"
 tags = ["linux", "epoll", "net"]
 website = "https://github.com/JeremyGrosser/epoll-ada"
@@ -8,3 +8,7 @@ website = "https://github.com/JeremyGrosser/epoll-ada"
 authors = ["Jeremy Grosser"]
 maintainers = ["Jeremy Grosser <jeremy@synack.me>"]
 maintainers-logins = ["JeremyGrosser"]
+
+[available.'case(os)']
+linux = true
+'...' = false
