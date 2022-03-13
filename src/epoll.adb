@@ -3,6 +3,7 @@
 --
 --  SPDX-License-Identifier: BSD-3-Clause
 --
+with GNAT.OS_Lib;
 with System;
 
 package body Epoll is
@@ -49,7 +50,7 @@ package body Epoll is
    is
    begin
       if epoll_ctl (This, Op, int (To_C (Socket)), Event) = -1 then
-         raise Epoll_Error;
+         raise Epoll_Error with GNAT.OS_Lib.Errno_Message;
       end if;
    end Control;
 
@@ -64,7 +65,7 @@ package body Epoll is
    begin
       Status := epoll_wait (This, E'Address, int (Max_Events), int (Timeout));
       if Status = -1 then
-         raise Epoll_Error;
+         raise Epoll_Error with GNAT.OS_Lib.Errno_Message;
       end if;
       return E (E'First .. Integer (Status));
    end Wait;
