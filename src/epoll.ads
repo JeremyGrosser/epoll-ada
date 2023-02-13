@@ -46,7 +46,7 @@ package Epoll is
       with Pack,
            Convention => C_Pass_By_Copy;
 
-   type Epoll_Events is array (Integer range <>) of Epoll_Event
+   type Epoll_Events is array (Integer range <>) of aliased Epoll_Event
       with Convention => C;
 
    type Epoll_Operation is (Add, Delete, Modify)
